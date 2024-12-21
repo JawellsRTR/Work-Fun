@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Teacher Checkout Process&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f4f4f9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1, h2 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>form {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-step {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.form-step.active {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>textarea, input {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #45a049;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.button-group {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.button-group button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 48%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #777;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Teacher Checkout Process&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;form id="checkoutForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Step 1: Requisition Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-step active" id="step-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Requisition Form&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="requisitionDetails"&gt;Details:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="requisitionDetails" name="requisitionDetails" placeholder="Enter your requisition details here..." required&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button type="button" onclick="nextStep(2)"&gt;Next&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Step 2: Book Order Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-step" id="step-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;Book Order Form&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="bookOrderDetails"&gt;Book Order Details:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="bookOrderDetails" name="bookOrderDetails" placeholder="Enter book order details..." required&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="button-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" onclick="prevStep(1)"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" onclick="nextStep(3)"&gt;Next&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Step 3: General Classroom Checkout Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="form-step" id="step-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2&gt;General Classroom Checkout Form&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;label for="checkoutDetails"&gt;Checkout Details:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;textarea id="checkoutDetails" name="checkoutDetails" placeholder="Enter classroom checkout details..." required&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="button-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="button" onclick="prevStep(2)"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;Submit&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Powered by Oak Mountain Academy&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentStep = 1;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function showStep(step) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.form-step').forEach((stepDiv) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>stepDiv.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById(`step-${step}`).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function nextStep(step) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentStep = step;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showStep(currentStep);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function prevStep(step) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentStep = step;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>showStep(currentStep);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('checkoutForm').addEventListener('submit', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>e.preventDefault();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const requisitionDetails = document.getElementById('requisitionDetails').value;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const bookOrderDetails = document.getElementById('bookOrderDetails').value;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const checkoutDetails = document.getElementById('checkoutDetails').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>alert(`Thank you for completing the process! Here are the details:\n</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Requisition Form: ${requisitionDetails}\n</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Book Order Form: ${bookOrderDetails}\n</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Classroom Checkout Form: ${checkoutDetails}`);</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Optional: Send data to a backend server or email</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
